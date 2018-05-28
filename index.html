@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <!-- Required meta tags -->
       <meta charset="utf-8">
+	  
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
       <title>Aditi</title>
@@ -26,6 +28,17 @@
 
 
    </head>
+   <script>
+	  $(document).ready(function () {
+        setTimeout(function () {
+            var hash = "#nextScroll";
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 2000, function () {
+                window.location.hash = hash;
+            });
+    }, 10000);
+	 });</script>
    <body>
     <header id="showcase">
         <div class="dark-overlay container">
@@ -68,6 +81,7 @@
                   <span><img class="faceIcon" style="float:left;" src="img/photos/icon/icon3.jpg"></span>
                 </div>
               </div>
+			  <div id="nextScroll"></div>
  <div class="col-lg-12 col-md-12 col-sm-12 mb-4">
                 <div id="chat1" class="right" style="float: right;">
                   <h3 class="h3-right pl-4 pr-5
@@ -139,10 +153,11 @@
 
     <!-- AMAZING YOU -->
     <section class="container-fluid" style="background-color: #08D9D6">
+	
           <div class="container">
             <h2>Amazing You</h2>
           <p>Smart,cute, pretty and fantastic. Adi and Aditi, On your birthday today, I just want you to know how lucky I am to have you in my life, happy birthday to you!</p>
-          <div class="photo-section">
+          <div class="photo-section" id="">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
